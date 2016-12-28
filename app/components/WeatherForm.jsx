@@ -11,7 +11,7 @@ var WeatherForm = React.createClass({
   render: function () {
     return (
       <div>
-        <h3>Weather Component</h3>
+        <h1 className="text-centered">Weather Component</h1>
           <form onSubmit={this.onFormSubmit}>
             <input type="text" ref="location"></input>
             <button>Get Weather</button>
