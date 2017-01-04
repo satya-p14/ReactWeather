@@ -17,7 +17,7 @@ module.exports = {
       }
     },function(err){
       console.log(err , 'err.message');
-      throw new Error(err.message);
+      throw new Error(err.data.message);
     })
   }
 }
