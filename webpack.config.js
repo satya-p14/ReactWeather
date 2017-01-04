@@ -1,16 +1,18 @@
 var webpack = require('webpack');
+
 module.exports = {
   entry: [
     'script!jquery/dist/jquery.min.js',
     'script!foundation-sites/dist/foundation.min.js',
-    './app/app.jsx'],
-  externals:{
-    jquery:'jQuery'
+    './app/app.jsx'
+  ],
+  externals: {
+    jquery: 'jQuery'
   },
-  plugins:[
+  plugins: [
     new webpack.ProvidePlugin({
-      '$':'jquery',
-      'jquery':'jquery'
+      '$': 'jquery',
+      'jQuery': 'jquery'
     })
   ],
   output: {
@@ -21,13 +23,14 @@ module.exports = {
     root: __dirname,
     alias: {
       Main: 'app/components/Main.jsx',
-      Nav:'app/components/Nav.jsx',
-      Weather:'app/components/Weather.jsx',
-      WeatherForm:'app/components/WeatherForm.jsx',
-      WeatherMessage:'app/components/WeatherMessage.jsx',
-      About:'app/components/About.jsx',
-      Example:'app/components/Example.jsx',
-      Openweathermap:'app/api/openweathermap.jsx'
+      Nav: 'app/components/Nav.jsx',
+      Weather: 'app/components/Weather.jsx',
+      WeatherForm: 'app/components/WeatherForm.jsx',
+      WeatherMessage: 'app/components/WeatherMessage.jsx',
+      About: 'app/components/About.jsx',
+      Examples: 'app/components/Examples.jsx',
+      openWeatherMap: 'app/api/openWeatherMap.jsx',
+      ErrorModal: 'app/components/ErrorModal.jsx'
     },
     extensions: ['', '.js', '.jsx']
   },
@@ -43,5 +46,5 @@ module.exports = {
       }
     ]
   },
-  devtool:'cheap-module-eval-source-map'
+  devtool: 'cheap-module-eval-source-map'
 };
